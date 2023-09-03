@@ -94,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
         create: (BuildContext context) => homeViewViewModel,
         child: Consumer<HomeViewViewModel>(
             builder: (context, value, _){
-              switch(value.moviesList.status!){
+              switch(value.moviesList.status!){ //here
                 case Status.LOADING:
                   return Center(child: CircularProgressIndicator());
                 case Status.ERROR:
